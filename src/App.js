@@ -57,5 +57,5 @@ console.log('starChar', starChar)
     } */}
     </div>
   );
-};
+}
 export default App;
