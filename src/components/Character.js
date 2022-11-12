@@ -1,26 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StarwarsStyle = styled.div`
+const StarwarsFormat = styled.div`
 justify-content:center;
 `
 
-const StarStyleBox = styled.div`
-margin:10% 15% 0;
-background-color:chocolate;
-border: solid black 3px;
-padding:10%;
-`
 
 const Character = props => {
     const {info} =props
     return (
-        <StarwarsStyle>
+        <StarwarsFormat>
             <h1>{info.name}</h1>
 
             <p><b>{info.name}</b> was born in {info.birth_year}. 
-            They are {info.height}km tall.</p>
-        </StarwarsStyle>
+            They are {info.height}cm tall.</p>
+        </StarwarsFormat>
     )
 }
 export default Character;
