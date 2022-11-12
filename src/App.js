@@ -9,7 +9,7 @@ const App = () => {
 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-  const [starChar ,setStarChar] = useState();
+  const [starChar ,setStarChar] = useState([]);
   const [buttons, setButtons]= useState()
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -35,13 +35,7 @@ const App = () => {
     }).catch(err => console.error(err))
   }, []);
 
-  // useEffect(()=> {
-  //   axios.get('https://swapi.dev/api/people')
-  //   .then(res=>{
-  //     setButtons(res.data.results);
-  //     console.log('buttons', res.data.results);
-  //   })
-  // })
+  
 
 console.log('starChar', starChar)
   return (
@@ -51,7 +45,7 @@ console.log('starChar', starChar)
            return <Character info={character} key={character.name} openDetails={openDetails}/>;
        })
    }
-   {
+   {/* {
        starChar && 
       <Details  
        name={starChar[0]} 
@@ -60,7 +54,7 @@ console.log('starChar', starChar)
       //  hairColor={starChar.hair_color}   
        close={closeDetails} 
        />
-    }
+    } */}
     </div>
   );
 };
