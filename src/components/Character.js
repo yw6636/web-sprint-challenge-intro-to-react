@@ -12,7 +12,7 @@ const Character = props => {
         <StarwarsFormat>
             <h1>{info.name}</h1>
 
-            <p><b>{info.name}</b> was born in {info.birth_year}. 
+            <p> was born in {info.birth_year}. 
             They are {info.height}cm tall.</p>
         </StarwarsFormat>
     )
